@@ -4,24 +4,24 @@ Ten specialist sources, each with a free sample and a one-time pack for £0.49. 
 
 ## Products
 
-| Product | What you get | URL |
-|---------|----------------|-----|
-| Companies House | Company profile, officers, and filings | https://uk-ch-mcp.donniertf.workers.dev |
-| Land Registry | Sold prices and area comparisons | https://uk-lr-mcp.donniertf.workers.dev |
-| Planning | Planning applications and decisions | https://uk-planning-mcp.donniertf.workers.dev |
-| Tenders | Live public-sector notices | https://uk-tenders-mcp.donniertf.workers.dev |
-| Places | Nearby amenities and local context | https://uk-places-mcp.donniertf.workers.dev |
-| Flood | Flood risk for a postcode | https://uk-flood-mcp.donniertf.workers.dev |
-| Crime | Local crime figures | https://uk-crime-mcp.donniertf.workers.dev |
-| Food hygiene | Food hygiene ratings | https://uk-hygiene-mcp.donniertf.workers.dev |
-| EPC | Energy performance certificates | https://uk-epc-mcp.donniertf.workers.dev |
-| CQC | Care provider ratings | https://uk-cqc-mcp.donniertf.workers.dev |
+| Product | What you get | Page | Buy |
+|---------|----------------|------|-----|
+| Companies House | Company profile, officers, and filings | https://uk-ch-mcp.donniertf.workers.dev | that page plus /buy — https://uk-ch-mcp.donniertf.workers.dev/buy |
+| Land Registry | Sold prices and area comparisons | https://uk-lr-mcp.donniertf.workers.dev | that page plus /buy — https://uk-lr-mcp.donniertf.workers.dev/buy |
+| Planning | Planning applications and decisions | https://uk-planning-mcp.donniertf.workers.dev | that page plus /buy — https://uk-planning-mcp.donniertf.workers.dev/buy |
+| Tenders | Live public-sector notices | https://uk-tenders-mcp.donniertf.workers.dev | that page plus /buy — https://uk-tenders-mcp.donniertf.workers.dev/buy |
+| Places | Nearby amenities and local context | https://uk-places-mcp.donniertf.workers.dev | that page plus /buy — https://uk-places-mcp.donniertf.workers.dev/buy |
+| Flood | Flood risk for a postcode | https://uk-flood-mcp.donniertf.workers.dev | that page plus /buy — https://uk-flood-mcp.donniertf.workers.dev/buy |
+| Crime | Local crime figures | https://uk-crime-mcp.donniertf.workers.dev | that page plus /buy — https://uk-crime-mcp.donniertf.workers.dev/buy |
+| Food hygiene | Food hygiene ratings | https://uk-hygiene-mcp.donniertf.workers.dev | that page plus /buy — https://uk-hygiene-mcp.donniertf.workers.dev/buy |
+| EPC | Energy performance certificates | https://uk-epc-mcp.donniertf.workers.dev | that page plus /buy — https://uk-epc-mcp.donniertf.workers.dev/buy |
+| CQC | Care provider ratings | https://uk-cqc-mcp.donniertf.workers.dev | that page plus /buy — https://uk-cqc-mcp.donniertf.workers.dev/buy |
 
 Places is also listed on [Smithery](https://smithery.ai/servers/donniertf/uk-places).
 
 ## Price
 
-Each pack is £0.49, paid once through Stripe Checkout. There is no subscription. A free sample is on every product page.
+Each pack is £0.49, paid once through Stripe Checkout. There is no subscription. A free sample is on every product page. The buy link is that page plus `/buy`.
 
 ## Free and paid
 
