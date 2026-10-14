@@ -1,5 +1,13 @@
 # UK public data for agents
 
+## ⭐ New: UK Postcode Property Report — £2.99
+
+**One postcode, one complete report**: Land Registry sold prices (every nearby sale, medians by property type), Environment Agency flood warning areas, 3-month crime trend, EPC ratings, food hygiene nearby, CQC care services, planning applications and the nearest schools, GPs, stations and shops. For home buyers, landlords, property investors and agents.
+
+- Free snapshot + sample London report: https://uk-postcode-report-mcp.donniertf.workers.dev
+- MCP (no login): `https://uk-postcode-report-mcp.donniertf.workers.dev/mcp` — tools `postcode_summary` (free), `buy_report_link`, `postcode_report` (£2.99 one-time, 7-day refund)
+- Not a valuation, not a survey.
+
 Ten specialist sources, each with a free sample and a one-time pack for £0.49. Built for agents, not dashboards.
 
 ## Products
@@ -40,6 +48,7 @@ Point an MCP client at each product’s `/mcp` address:
 ```json
 {
   "mcpServers": {
+    "uk-postcode-report": { "url": "https://uk-postcode-report-mcp.donniertf.workers.dev/mcp" },
     "uk-companies-house": { "url": "https://uk-ch-mcp.donniertf.workers.dev/mcp" },
     "uk-land-registry": { "url": "https://uk-lr-mcp.donniertf.workers.dev/mcp" },
     "uk-planning": { "url": "https://uk-planning-mcp.donniertf.workers.dev/mcp" },
