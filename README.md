@@ -6,6 +6,14 @@
 |---|---|---|---|
 | **UK Property Deal Finder** — streets selling below the district median (Land Registry sold prices) + planning + EPC refurb hints | `deal_scan` (top 3 streets) | £9/month | https://uk-property-deals-mcp.donniertf.workers.dev · `/mcp` |
 | **UK Tender Alerts** — live Contracts Finder tenders matched to your keywords + region, deadlines, values, daily `new_since` | `tender_match` (top 3) | £9/month | https://uk-tender-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Insolvency Alerts** — Gazette winding-up petitions, liquidations, administrations; watch 50 customers/suppliers | `insolvency_check` | £15/month | https://uk-insolvency-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Sanctions Screening** — batch-screen names against the UK Sanctions List (FCDO/OFSI), audit-ready | `sanctions_check` | £19/month | https://uk-sanctions-screen-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Visa Sponsor Register** — Home Office licensed sponsors: check, town/route lead lists, new & removed, B-rated | `sponsor_check` | £15/month | https://uk-sponsor-register-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Fuel Price Finder** — cheapest diesel/petrol near a postcode, fleet depot reports, £ saved per fill | `cheapest_fuel` | £9/month | https://uk-fuel-prices-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Electricity Price Slots** — cheapest half-hour Agile prices by postcode, best N-hour window for EV/heat/batteries | `cheapest_slots` | £9/month | https://uk-energy-prices-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Salary Benchmarks** — ONS pay percentiles by postcode, area comparisons, offer checks | `area_salary` | £9/month | https://uk-salary-benchmarks-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Business Calendar** — working days, bank holidays, invoice due dates, HMRC & Companies House deadlines | `next_bank_holidays` | £9/month | https://uk-business-calendar-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Food Recall Alerts** — FSA recalls & allergy alerts, batch codes, stock watchlists | `latest_alerts` | £9/month | https://uk-food-alerts-mcp.donniertf.workers.dev · `/mcp` |
 
 Subscribe at each page's `/buy`. Not a valuation; not legal or procurement advice.
 
@@ -14,6 +22,19 @@ Subscribe at each page's `/buy`. Not a valuation; not legal or procurement advic
 | Product | Free tool | Pro | Page / MCP |
 |---|---|---|---|
 | **Crypto Perps Pulse** — funding rates, open interest, 24h movers across perpetual futures. Read-only, never trades. Not financial advice. | `market_pulse` | £19/month | https://trading-data-mcp.donniertf.workers.dev · `/mcp` |
+| **Prediction Market Rule Check** — risk-score Polymarket/Kalshi settlement wording before you trade. Not financial advice. | `rule_check` | £12/month | https://prediction-rules-mcp.donniertf.workers.dev · `/mcp` |
+
+## 💷 Bundles — one-off, no subscription
+
+| Bundle | Packs | Price | Buy |
+|---|---|---|---|
+| **Property & Area Due-Diligence 5-Pack** | Land Registry sold prices, EPC, flood, crime, planning | **£1.99** (vs £2.45) | https://uk-mcp-bundles.donniertf.workers.dev |
+| **All-10 Bundle** | Companies House, Land Registry, planning, tenders, places, flood, crime, food hygiene, EPC, CQC | **£3.99** (vs £4.90) | https://uk-mcp-bundles.donniertf.workers.dev |
+
+One pass, one pack per included server, valid 90 days. Agents: `POST /checkout?bundle=area5|all10` → `GET /token?session_id=` → `Authorization: Bearer <pass>`.
+
+## 🤖 Agent-ready buying
+Every subscription server exposes `/llms.txt`, `/.well-known/mcp` (server card), `/pricing.json`, `POST /checkout` (returns a Stripe Checkout URL) and `GET /token?session_id=` (returns the access token once paid). Free tiers need no key.
 
 ## ⭐ New: UK Postcode Property Report — £2.99
 
