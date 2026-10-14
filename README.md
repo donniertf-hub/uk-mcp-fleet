@@ -59,7 +59,7 @@ Subscribe at each page's `/buy`. Not a valuation; not legal or procurement advic
 | US Property & Area Risk | flood claims, disasters, earthquakes, EPA, weather | $25/month ($54) |
 | US Markets & Filings | insider trades, SEC filings, financials, Federal Register | $29/month ($58) |
 | US Health & Safety | NPI, drug shortages, FDA recalls, CPSC recalls, vehicle recalls | $19/month ($45) |
-| US All-20 | all 20 US servers | $79/month ($237) |
+| US All-20 | all 20 US servers | $79/month ($236) |
 
 Agents: `POST https://us-mcp-bundles.donniertf.workers.dev/checkout?bundle=<id>` then `GET /token?session_id=`. See `/llms.txt` and `/pricing.json`.
 
