@@ -24,6 +24,45 @@ Subscribe at each page's `/buy`. Not a valuation; not legal or procurement advic
 | **Crypto Perps Pulse** — funding rates, open interest, 24h movers across perpetual futures. Read-only, never trades. Not financial advice. | `market_pulse` | £19/month | https://trading-data-mcp.donniertf.workers.dev · `/mcp` |
 | **Prediction Market Rule Check** — risk-score Polymarket/Kalshi settlement wording before you trade. Not financial advice. | `rule_check` | £12/month | https://prediction-rules-mcp.donniertf.workers.dev · `/mcp` |
 
+## 🇺🇸 US data MCPs (free tier + monthly Pro, USD)
+
+20 remote MCP servers on official US government data. Each has a free tool (no key), Stripe monthly Pro, `/llms.txt`, `/.well-known/mcp`, `/pricing.json`, `POST /checkout` and `GET /token?session_id=`.
+
+| Product | Free tool | Pro | Page / MCP |
+|---|---|---|---|
+| **US Bank Check (FDIC)** — Is this bank FDIC-insured, healthy and still open? Bank profiles, ROA/ROE, failures feed and state screens from FDIC BankFind. | `bank_check` | $12/month | https://us-bank-check-mcp.donniertf.workers.dev · `/mcp` |
+| **US Business Calendar** — US federal holidays, business-day maths, invoice due dates and IRS deadlines — for bookkeeping, payroll and AI agents. | `next_holidays` | $9/month | https://us-business-calendar-mcp.donniertf.workers.dev · `/mcp` |
+| **US Company Financials (SEC XBRL)** — Revenue, profit, cash, debt and EPS for any US-listed company straight from SEC XBRL filings — history and peer comparison. | `key_financials` | $15/month | https://us-company-financials-mcp.donniertf.workers.dev · `/mcp` |
+| **US Disaster Declarations (FEMA)** — FEMA disaster declarations by state and county — history, frequency and a daily feed of new declared areas. | `recent_disasters` | $12/month | https://us-disaster-declarations-mcp.donniertf.workers.dev · `/mcp` |
+| **US Drug Shortages (FDA)** — Which drugs are in shortage right now? FDA shortage status, reasons and availability — with formulary watchlists for pharmacies and clinics. | `shortage_check` | $9/month | https://us-drug-shortages-mcp.donniertf.workers.dev · `/mcp` |
+| **US Earthquake Risk & Alerts** — Earthquakes near any US ZIP — recent shaking, 20-year seismic history and multi-site monitoring from USGS. | `recent_quakes` | $9/month | https://us-earthquake-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **US EPA Compliance Check** — Polluters next door? EPA compliance, violations, inspections and penalties for any US ZIP code or company. | `epa_check` | $12/month | https://us-epa-compliance-mcp.donniertf.workers.dev · `/mcp` |
+| **US Federal Grants Finder** — Open and upcoming US federal grants for your keywords — agency and eligibility filters, closing-soon alerts — from Grants.gov. | `grant_search` | $15/month | https://us-federal-grants-mcp.donniertf.workers.dev · `/mcp` |
+| **US Federal Register Watch** — New federal rules, proposed rules and notices for your keywords and agencies — with open comment deadlines — in your AI agent. | `reg_search` | $12/month | https://us-federal-register-mcp.donniertf.workers.dev · `/mcp` |
+| **US Flood Claims by ZIP** — How often does this ZIP flood? FEMA NFIP flood-insurance claim history — claims, dollars paid, flood zones and named storms. | `flood_history` | $12/month | https://us-flood-claims-mcp.donniertf.workers.dev · `/mcp` |
+| **US FDA Recalls (Food, Drug, Device)** — FDA food, drug and medical-device recalls by keyword, class and state — supplier watchlists and daily checks for your AI agent. | `latest_recalls` | $9/month | https://us-food-drug-recalls-mcp.donniertf.workers.dev · `/mcp` |
+| **US Insider Trades (SEC Form 4)** — Insider buying and selling from SEC Form 4 filings — parsed, sized and scanned for open-market purchases. | `insider_trades` | $19/month | https://us-insider-trades-mcp.donniertf.workers.dev · `/mcp` |
+| **US Nonprofit & Charity Check** — Check any US charity by name or EIN — Form 990 revenue, expenses, assets and exec pay — plus nonprofit prospect lists. | `nonprofit_check` | $9/month | https://us-nonprofit-check-mcp.donniertf.workers.dev · `/mcp` |
+| **US Healthcare Provider (NPI) Lookup** — Verify any US doctor, dentist, therapist or clinic by NPI — and build specialty lead lists by city — from the CMS NPI Registry. | `npi_lookup` | $9/month | https://us-npi-lookup-mcp.donniertf.workers.dev · `/mcp` |
+| **US Consumer Product Recalls (CPSC)** — Is it recalled? US consumer product recalls from the CPSC — search by product, brand, retailer or hazard, and check your inventory. | `product_recalls` | $9/month | https://us-product-recalls-mcp.donniertf.workers.dev · `/mcp` |
+| **US OFAC Sanctions Screening** — Screen customers, vendors and counterparties against the OFAC SDN list from your AI agent — batch, fuzzy, audit-ready. | `ofac_check` | $19/month | https://us-sanctions-screen-mcp.donniertf.workers.dev · `/mcp` |
+| **US SEC Filings Watch** — Latest 10-K, 10-Q and 8-K filings for any US-listed company, with 8-K red flags decoded — bankruptcy, delisting, auditor changes, restatements. | `latest_filings` | $12/month | https://us-sec-filings-mcp.donniertf.workers.dev · `/mcp` |
+| **US Vehicle Recalls & VIN Check** — Decode any VIN and see NHTSA safety recalls and owner complaints — batch checks for dealers, fleets and car flippers. | `vehicle_recalls` | $9/month | https://us-vehicle-recalls-mcp.donniertf.workers.dev · `/mcp` |
+| **US H-1B Visa Sponsors** — Which US employers actually sponsor H-1B visas? Approvals, denials and sponsor lead lists by city, state and industry. | `h1b_check` | $15/month | https://us-visa-sponsors-mcp.donniertf.workers.dev · `/mcp` |
+| **US Severe Weather Alerts** — Active National Weather Service warnings for any US ZIP — monitor every store, job site, depot or property from one AI agent call. | `weather_alerts` | $9/month | https://us-weather-alerts-mcp.donniertf.workers.dev · `/mcp` |
+
+### US bundles: one token unlocks every server in the bundle — https://us-mcp-bundles.donniertf.workers.dev
+
+| Bundle | Includes | Price (separately) |
+|---|---|---|
+| US Compliance | sanctions, H-1B sponsors, nonprofit, bank, NPI | $29/month ($64) |
+| US Property & Area Risk | flood claims, disasters, earthquakes, EPA, weather | $25/month ($54) |
+| US Markets & Filings | insider trades, SEC filings, financials, Federal Register | $29/month ($58) |
+| US Health & Safety | NPI, drug shortages, FDA recalls, CPSC recalls, vehicle recalls | $19/month ($45) |
+| US All-20 | all 20 US servers | $79/month ($237) |
+
+Agents: `POST https://us-mcp-bundles.donniertf.workers.dev/checkout?bundle=<id>` then `GET /token?session_id=`. See `/llms.txt` and `/pricing.json`.
+
 ## 💷 Bundles — one-off, no subscription
 
 | Bundle | Packs | Price | Buy |
