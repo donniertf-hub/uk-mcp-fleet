@@ -63,6 +63,44 @@ Subscribe at each page's `/buy`. Not a valuation; not legal or procurement advic
 
 Agents: `POST https://us-mcp-bundles.donniertf.workers.dev/checkout?bundle=<id>` then `GET /token?session_id=`. See `/llms.txt` and `/pricing.json`.
 
+## 🇨🇦 Canada data MCPs (free tier + monthly Pro, CAD)
+
+20 remote MCP servers on official Canadian government data. Each has a free tool (no key), Stripe monthly Pro in CAD, `/llms.txt`, `/.well-known/mcp`, `/pricing.json`, `POST /checkout` and `GET /token?session_id=`.
+
+| Product | Free tool | Pro | Page / MCP |
+|---|---|---|---|
+| **Canada Air Quality (AQHI)** — Canada's Air Quality Health Index for any postal code — wildfire-smoke checks, forecasts and multi-site monitoring from your AI agent. | `air_quality` | C$12/month | https://ca-air-quality-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Business Calendar** — Canadian federal and provincial public holidays, business-day maths and invoice due dates for every province and territory — for your AI agent. | `next_holidays` | C$12/month | https://ca-business-calendar-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Climate Observations** — Official Environment Canada climate station observations near any postal code — daily temperatures, precipitation and multi-station compares for your AI agent. | `nearest_station` | C$12/month | https://ca-climate-normals-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Clinical Trials** — Clinical trials authorised by Health Canada — search by condition or drug, landscape counts and sponsor detail for your AI agent. | `trial_search` | C$15/month | https://ca-clinical-trials-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Consumer Product Recalls** — Health Canada consumer product recalls (toys, electronics, household, children's products) — is it recalled in Canada? Search, watchlists and new-since checks. | `latest_recalls` | C$12/month | https://ca-consumer-product-recalls-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Drug Product Lookup** — Look up any Canadian drug by brand or DIN — ingredients, strengths, marketing status, schedule and class from Health Canada's Drug Product Database. | `drug_search` | C$12/month | https://ca-drug-lookup-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Earthquake Alerts** — Recent earthquakes near any Canadian postal code — seismic history for sites, pipelines, mines and insurers from your AI agent. | `recent_quakes` | C$12/month | https://ca-earthquake-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Economic Indicators** — Official Statistics Canada indicators — CPI inflation, unemployment, jobs, GDP, house prices and any StatCan series for your AI agent. | `indicator` | C$15/month | https://ca-economic-indicators-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Food Recall Alerts** — CFIA food recalls and allergy alerts for Canada — search by product, allergen or hazard, watchlists and new-since checks for your AI agent. | `latest_recalls` | C$12/month | https://ca-food-recalls-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada FX & Policy Rates** — Bank of Canada FX rates, overnight target, prime, mortgage rates and bond yields — convert CAD amounts and pull official rates from your AI agent. | `fx_rate` | C$12/month | https://ca-fx-rates-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Health Product Recalls** — Health Canada recalls for drugs, natural health products and medical devices — search by product, company or hazard for your AI agent. | `latest_recalls` | C$12/month | https://ca-health-product-recalls-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Medical Device Licences** — Is this medical device licensed for sale in Canada? Search Health Canada's MDALL by trade name and verify licences in bulk from your AI agent. | `device_search` | C$15/month | https://ca-medical-devices-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Natural Health Product Check** — Verify supplements and natural health products are licensed in Canada (NPN) — ingredients, claims and risk statements from Health Canada's LNHPD. | `npn_check` | C$12/month | https://ca-natural-health-products-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Postal Code Lookup** — Resolve Canadian postal codes to city, province and coordinates — batch lookups and distances for your AI agent. | `postal_lookup` | C$9/month | https://ca-postal-lookup-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada River Levels & Flood Watch** — Real-time river and lake levels from Water Survey of Canada gauges near any postal code — trends, rise rates and multi-site flood watch for your AI agent. | `river_levels` | C$15/month | https://ca-river-levels-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Sanctions Screening** — Screen customers, suppliers and vessels against Canada's consolidated autonomous sanctions list (SEMA) from your AI agent — batch, fuzzy, audit-ready. | `sanctions_check` | C$25/month | https://ca-sanctions-screen-mcp.donniertf.workers.dev · `/mcp` |
+| **CanadaBuys Federal Tenders** — Open Government of Canada tenders from CanadaBuys — keyword and region search, closing-soon and daily new-notice feeds for your AI agent. | `tender_search` | C$15/month | https://ca-tenders-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Vehicle Recalls** — Transport Canada vehicle safety recalls by make, model and year — full defect and remedy details and fleet checks from your AI agent. | `vehicle_recalls` | C$12/month | https://ca-vehicle-recalls-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Weather Alerts** — Active Environment Canada weather warnings for any Canadian postal code — monitor every store, job site, depot or property from one AI agent call. | `weather_alerts` | C$12/month | https://ca-weather-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **Canada Weather Forecast** — Official Environment Canada forecasts and current conditions for any Canadian postal code — 7-day, hourly and multi-site from your AI agent. | `forecast` | C$12/month | https://ca-weather-forecast-mcp.donniertf.workers.dev · `/mcp` |
+
+### Canada bundles: one token unlocks every server in the bundle — https://ca-mcp-bundles.donniertf.workers.dev
+
+| Bundle | Includes | Price (separately) |
+|---|---|---|
+| Canada Health & Safety | food, health-product, consumer and vehicle recalls + drug DIN lookup | C$29/month (C$60) |
+| Canada Weather & Environment Risk | weather alerts, forecast, AQHI, river levels, earthquakes | C$29/month (C$63) |
+| Canada Business & Compliance | sanctions, CanadaBuys tenders, FX/policy rates, business calendar, StatCan indicators | C$35/month (C$79) |
+| Canada All-20 | all 20 Canada servers | C$89/month (C$265) |
+
+Agents: `POST https://ca-mcp-bundles.donniertf.workers.dev/checkout?bundle=<id>` then `GET /token?session_id=`. See `/llms.txt` and `/pricing.json`.
+
 ## 💷 Bundles — one-off, no subscription
 
 | Bundle | Packs | Price | Buy |
