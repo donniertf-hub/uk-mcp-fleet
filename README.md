@@ -101,6 +101,52 @@ Agents: `POST https://us-mcp-bundles.donniertf.workers.dev/checkout?bundle=<id>`
 
 Agents: `POST https://ca-mcp-bundles.donniertf.workers.dev/checkout?bundle=<id>` then `GET /token?session_id=`. See `/llms.txt` and `/pricing.json`.
 
+## 🇯🇵 Japan data MCPs (free tier + monthly Pro, JPY)
+
+17 remote MCP servers on official Japanese public data (JMA, GSI, Ministry of the Environment, e-Gov, National Diet Library). English output with Japanese source names. Each has a free tool (no key), Stripe monthly Pro in JPY, x402 USDC pay-per-call, `/llms.txt`, `/.well-known/mcp`, `/pricing.json`, `POST /checkout` and `GET /token`.
+
+| Product | Free tool | Pro | Page / MCP |
+|---|---|---|---|
+| **Japan AMeDAS Observations** — Nationwide JMA AMeDAS temperature, humidity and precipitation observations — live station map for your AI agent. | `latest_obs_time` | ¥1,200/month | https://jp-amedas-obs-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Business Calendar** — Japanese business days, holiday checks and invoice due dates for your AI agent. | `next_holidays` | ¥1,200/month | https://jp-business-calendar-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Diet Speeches** — Search National Diet proceedings speeches — keyword research for your AI agent. | `speech_search` | ¥1,500/month | https://jp-diet-speeches-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Earthquake Alerts** — Live JMA earthquake bulletins and intensity reports for Japan — search and realtime feeds for your AI agent. | `latest_quakes` | ¥1,900/month | https://jp-earthquake-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Elevation (GSI DEM)** — Ground elevation in metres anywhere in Japan via GSI DEM — batch and path profiles for your AI agent. | `elevation` | ¥900/month | https://jp-elevation-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan FX Rates (JPY)** — JPY exchange rates and conversions — ECB reference via Frankfurter for your AI agent. | `fx_rate` | ¥1,200/month | https://jp-fx-rates-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Heat Stress (WBGT)** — Ministry of the Environment WBGT heat-stress forecasts for Japan — station search for your AI agent. | `wbgt_sample` | ¥1,200/month | https://jp-heat-stress-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Laws Search** — Search Japanese statutes via the e-Gov Law API — titles and IDs for your AI agent. | `law_search` | ¥1,500/month | https://jp-laws-search-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Library Search (NDL)** — National Diet Library catalogue search — titles and creators for your AI agent. | `library_search` | ¥1,200/month | https://jp-library-search-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Postal Code Lookup** — Resolve Japanese 〒 postcodes to prefecture, city and town — batch lookups for your AI agent. | `postal_lookup` | ¥900/month | https://jp-postal-lookup-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Public Holidays** — Japanese national holidays calendar — next holidays and date checks for your AI agent. | `next_holidays` | ¥900/month | https://jp-holidays-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Reverse Geocode** — Turn coordinates into Japanese municipality names via GSI — batch reverse geocoding for your AI agent. | `reverse_geocode` | ¥900/month | https://jp-reverse-geocode-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Tsunami Alerts** — JMA tsunami forecasts and warnings for the Japanese coast — live bulletins for your AI agent. | `latest_tsunami` | ¥1,500/month | https://jp-tsunami-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Typhoon Tracker** — Active typhoons and tropical cyclones from JMA — live target list for your AI agent. | `active_typhoons` | ¥1,500/month | https://jp-typhoon-tracker-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Volcano Alerts** — JMA volcano warnings and eruption forecasts — search active Japanese volcanoes from your AI agent. | `latest_volcano` | ¥1,200/month | https://jp-volcano-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Weather Forecast** — Official JMA short-term forecasts by prefecture — structured time series for your AI agent. | `forecast` | ¥1,200/month | https://jp-weather-forecast-mcp.donniertf.workers.dev · `/mcp` |
+| **Japan Weather Warnings** — JMA weather warnings by prefecture — headlines and multi-area watchlists for your AI agent. | `warnings_for` | ¥1,200/month | https://jp-weather-warnings-mcp.donniertf.workers.dev · `/mcp` |
+
+Japan bundles (Weather & Disaster ¥4,900 · Geo & Places ¥2,900 · Markets & Civic ¥3,900 · All ¥12,900 per month) launch soon at jp-mcp-bundles.
+
+## 🇦🇺 Australia data MCPs (free tier + monthly Pro, AUD)
+
+11 remote MCP servers on official Australian public data (AusTender, ABS, AEMO, Geoscience Australia, NSW RFS, Emergency Victoria, DFAT sanctions). Each has a free tool (no key), Stripe monthly Pro in AUD, x402 USDC pay-per-call, `/llms.txt`, `/.well-known/mcp`, `/pricing.json`, `POST /checkout` and `GET /token`.
+
+| Product | Free tool | Pro | Page / MCP |
+|---|---|---|---|
+| **Australia Air Quality Sites (NSW)** — NSW air quality monitoring sites — find stations near a postcode for your AI agent. | `sites` | A$12/month | https://au-air-quality-nsw-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Bushfire Incidents (NSW)** — NSW Rural Fire Service major fire incidents — live GeoJSON for your AI agent. | `major_incidents` | A$15/month | https://au-bushfire-nsw-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Business Calendar** — Australian business days and holiday-aware due dates for your AI agent. | `next_holidays` | A$12/month | https://au-business-calendar-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia CPI (ABS)** — Australian Bureau of Statistics Consumer Price Index — headline CPI for your AI agent. | `latest_cpi` | A$15/month | https://au-cpi-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Earthquake Alerts** — Geoscience Australia and USGS earthquakes for the Australian region — live feeds for your AI agent. | `recent_quakes` | A$12/month | https://au-earthquake-alerts-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Emergency Incidents (VIC)** — Emergency Victoria public incidents feed — fires, floods and more for your AI agent. | `incidents` | A$15/month | https://au-emergency-vic-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia NEM Electricity Prices** — AEMO National Electricity Market regional prices — live summary for your AI agent. | `nem_prices` | A$15/month | https://au-nem-prices-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Postcode Lookup** — Resolve Australian postcodes to locality, state and coordinates for your AI agent. | `postal_lookup` | A$9/month | https://au-postal-lookup-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Public Holidays** — Australian national and state public holidays — next dates and checks for your AI agent. | `next_holidays` | A$9/month | https://au-holidays-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Sanctions Screening** — Screen names against Australia DFAT consolidated sanctions targets — watchlists for your AI agent. | `screen_name` | A$19/month | https://au-sanctions-screen-mcp.donniertf.workers.dev · `/mcp` |
+| **Australia Tenders (AusTender)** — AusTender contract awards via OCDS — recent government contracts for your AI agent. | `recent_contracts` | A$15/month | https://au-tenders-mcp.donniertf.workers.dev · `/mcp` |
+
+Australia bundles (Weather & Emergency A$39 · Markets & Economy A$39 · Safety & Infrastructure A$35 · All A$99 per month) launch soon at au-mcp-bundles.
+
 ## 💷 Bundles — one-off, no subscription
 
 | Bundle | Packs | Price | Buy |
