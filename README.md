@@ -1,5 +1,20 @@
 # UK public data for agents
 
+## 🆕 Subscriptions (free tier + monthly Pro, cancel anytime)
+
+| Product | Free tool | Pro | Page / MCP |
+|---|---|---|---|
+| **UK Property Deal Finder** — streets selling below the district median (Land Registry sold prices) + planning + EPC refurb hints | `deal_scan` (top 3 streets) | £9/month | https://uk-property-deals-mcp.donniertf.workers.dev · `/mcp` |
+| **UK Tender Alerts** — live Contracts Finder tenders matched to your keywords + region, deadlines, values, daily `new_since` | `tender_match` (top 3) | £9/month | https://uk-tender-alerts-mcp.donniertf.workers.dev · `/mcp` |
+
+Subscribe at each page's `/buy`. Not a valuation; not legal or procurement advice.
+
+### Trading data (separate)
+
+| Product | Free tool | Pro | Page / MCP |
+|---|---|---|---|
+| **Crypto Perps Pulse** — funding rates, open interest, 24h movers across perpetual futures. Read-only, never trades. Not financial advice. | `market_pulse` | £19/month | https://trading-data-mcp.donniertf.workers.dev · `/mcp` |
+
 ## ⭐ New: UK Postcode Property Report — £2.99
 
 **One postcode, one complete report**: Land Registry sold prices (every nearby sale, medians by property type), Environment Agency flood warning areas, 3-month crime trend, EPC ratings, food hygiene nearby, CQC care services, planning applications and the nearest schools, GPs, stations and shops. For home buyers, landlords, property investors and agents.
