@@ -1,5 +1,33 @@
 # UK public data for agents
 
+## Start here: connect, try free data, then choose a pack
+
+This repository is the product catalogue and setup guide, not the official public registers. You do not need to contact us to try the free tools.
+
+1. Open the [Companies House product page](https://uk-ch-mcp.donniertf.workers.dev), or try the [free London area sample](https://uk-ch-mcp.donniertf.workers.dev/v1/discover/new-cos?area=London).
+2. In a client that supports remote **Streamable HTTP MCP**, add this server URL: `https://uk-ch-mcp.donniertf.workers.dev/mcp`. If your client accepts `mcpServers` configuration, use the example below; clients with a server-URL field can use the URL directly.
+3. Ask the agent to call `company_status` with your chosen `company_number`, or search by `name` to find the right number. This status tool is free and needs no payment key. Confirm the company name and number before buying.
+4. For a full company pack, call `kyb_pack` with **that explicit company number**. Review the company number, product and price returned before opening any checkout link. Do not use a bare Companies House `/buy` URL: the current page can default to an example company rather than asking which one you want.
+5. After Stripe payment, follow the success redirect or call `redeem_pack` with the paid Checkout `session_id`. The documented redemption returns the pack JSON once; save the result. The [current tool descriptions](https://uk-ch-mcp.donniertf.workers.dev/tools) list the REST routes and required inputs.
+
+```json
+{
+  "mcpServers": {
+    "uk-companies-house": {
+      "url": "https://uk-ch-mcp.donniertf.workers.dev/mcp"
+    }
+  }
+}
+```
+
+**Example request to your agent:** “Find the Companies House number for the company I name, show me its name and status for free, and ask me before buying its full pack.”
+
+**Billing is product-specific.** The original UK packs are one-time purchases; the Companies House pack is £0.49 through Stripe, with $0.60 USDC on Base via x402 as an alternative. The subscription products below are separate monthly plans. Free discovery does not unlock a paid pack or a subscription. Check each product's current page and [Companies House pricing](https://uk-ch-mcp.donniertf.workers.dev/pricing.json) before paying. Payment and redemption have not been tested end to end in this documentation update.
+
+**Freshness:** Companies House status may be cached for six hours, and area discovery for 24 hours. The area search is not a guarantee of today's incorporations or the newest companies across an entire area; inspect each company's incorporation date. A response-generation timestamp does not establish when the company's status changed. The separate `daily_new_companies` tool covers daily incorporations as described in the [agent guide](https://uk-ch-mcp.donniertf.workers.dev/llms.txt).
+
+See [Connect](#connect) for the other original UK server addresses, or browse the catalogue below.
+
 ## 🆕 Subscriptions (free tier + monthly Pro, cancel anytime)
 
 | Product | Free tool | Pro | Page / MCP |
@@ -193,7 +221,7 @@ Ten specialist sources, each with a free sample and a one-time pack for £0.49. 
 
 | Product | What you get | Page | Buy |
 |---------|----------------|------|-----|
-| Companies House | Company profile, officers, and filings | https://uk-ch-mcp.donniertf.workers.dev | that page plus /buy — https://uk-ch-mcp.donniertf.workers.dev/buy |
+| Companies House | Company profile, officers, and filings | https://uk-ch-mcp.donniertf.workers.dev | Call `kyb_pack` with your chosen `company_number`; review the returned checkout link |
 | Land Registry | Sold prices and area comparisons | https://uk-lr-mcp.donniertf.workers.dev | that page plus /buy — https://uk-lr-mcp.donniertf.workers.dev/buy |
 | Planning | Planning applications and decisions | https://uk-planning-mcp.donniertf.workers.dev | that page plus /buy — https://uk-planning-mcp.donniertf.workers.dev/buy |
 | Tenders | Live public-sector notices | https://uk-tenders-mcp.donniertf.workers.dev | that page plus /buy — https://uk-tenders-mcp.donniertf.workers.dev/buy |
@@ -208,7 +236,7 @@ Places is also listed on [Smithery](https://smithery.ai/servers/donniertf/uk-pla
 
 ## Price
 
-Each pack is £0.49, paid once through Stripe Checkout. There is no subscription. A free sample is on every product page. The buy link is that page plus `/buy`.
+The original UK packs in the Products table above are £0.49 each, paid once through Stripe Checkout. This does not apply to the separately listed subscription products or the £2.99 postcode report. Free samples are separate from paid access. Choose the required company, area or other input through the product tools before following the returned purchase link; review the product and inputs before paying.
 
 ## Free and paid
 
@@ -246,7 +274,7 @@ Connecting is free. A pack that needs payment returns a checkout link.
 
 ## Example asks
 
-**Companies House.** Get a structured company pack for company number `00000006`.
+**Companies House.** Find the company number by name with the free `company_status` tool, confirm the match, then request `kyb_pack` for that explicit number and review the price before buying.
 
 **Land Registry.** Compare sold prices around postcode `M1`. England and Wales residential sales only.
 
