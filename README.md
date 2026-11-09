@@ -7,7 +7,7 @@ This repository is the product catalogue and setup guide, not the official publi
 1. Open the [Companies House product page](https://uk-ch-mcp.donniertf.workers.dev), or try the [free London area sample](https://uk-ch-mcp.donniertf.workers.dev/v1/discover/new-cos?area=London).
 2. In a client that supports remote **Streamable HTTP MCP**, add this server URL: `https://uk-ch-mcp.donniertf.workers.dev/mcp`. If your client accepts `mcpServers` configuration, use the example below; clients with a server-URL field can use the URL directly.
 3. Ask the agent to call `company_status` with your chosen `company_number`, or search by `name` to find the right number. This status tool is free and needs no payment key. Confirm the company name and number before buying.
-4. For a full company pack, call `kyb_pack` with **that explicit company number**. Review the company number, product and price returned before opening any checkout link. Do not use a bare Companies House `/buy` URL: the current page can default to an example company rather than asking which one you want.
+4. For a full company pack, call `kyb_pack` with **that explicit company number**. Review the company number, product and price returned before opening any checkout link. In a browser, [`/buy`](https://uk-ch-mcp.donniertf.workers.dev/buy) asks you to enter the company number first and rejects invalid numbers; it never picks a company for you.
 5. After Stripe payment, follow the success redirect or call `redeem_pack` with the paid Checkout `session_id`. The documented redemption returns the pack JSON once; save the result. The [current tool descriptions](https://uk-ch-mcp.donniertf.workers.dev/tools) list the REST routes and required inputs.
 
 ```json
